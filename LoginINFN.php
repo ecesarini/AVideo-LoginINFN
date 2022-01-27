@@ -42,7 +42,7 @@ class LoginINFN extends PluginAbstract {
 
         return $obj;
     }
-    
+    /*
     public function getLogin() {
         $obj = new stdClass();
         $obj->class = "btn btn-danger btn-block infn-sso"; 
@@ -50,6 +50,13 @@ class LoginINFN extends PluginAbstract {
         $obj->type = "InfnAAI"; 
         $obj->linkToDevelopersPage = "https://baltig.infn.it";
         return $obj;
+    }
+     * 
+     */
+    
+    public function getLogin() {
+        global $global;
+        return $global['systemRootPath'] . 'plugin/LoginINFN/loginForm.php';
     }
 
     public function getCSSFiles() {
