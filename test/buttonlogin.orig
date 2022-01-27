@@ -1,0 +1,58 @@
+function infnCustomButton() {
+    let c = document.getElementsByClassName("infn-sso");
+
+    let mouseEnter = () => {
+        c[0].style.backgroundColor = "#4697B4";
+        c[0].style.border = "2px solid white";
+    };
+    let mouseDown = () => {
+        c[0].style.backgroundColor = "#4697B4";
+        c[0].style.border = "2px solid white";
+    };
+    let mouseUp = () => {
+        c[0].style.backgroundColor = "#002D4B";
+        c[0].style.border = "2px solid white";
+    };
+    let mouseLeave = () => {
+        c[0].style.backgroundColor = "#002D4B";
+        c[0].style.border = "2px solid white";
+    };
+    let mouseClick = () => {
+        c[0].style.backgroundColor = "#4697B4";
+        c[0].style.border = "2px solid white";
+    };
+    
+    c[0].addEventListener("mouseenter", mouseEnter);
+    c[0].addEventListener("mousedown", mouseDown);
+    c[0].addEventListener("mouseup", mouseUp);
+    c[0].addEventListener("mouseleave", mouseLeave);
+    c[0].addEventListener("click", mouseClick);
+
+    c[0].innerText = " INFN AAI";
+}
+
+function infnHidePanelFooter() {
+    let lfTextId = document.getElementById("loginForm").getElementsByClassName("control-label")[0];
+    let lfTextPw = document.getElementById("loginForm").getElementsByClassName("control-label")[1];
+    let lfTextMb = document.getElementById("mainButton");
+    let pf = document.getElementsByClassName("panel-footer");
+
+    lfTextId.textContent = "ADMIN ID";
+    lfTextPw.textContent = "ADMIN Password";
+    lfTextMb.innerHTML = lfTextMb.innerHTML.replace(/Sign in/g, "ADMIN Sign in");
+    pf[0].style.display = "none";
+}
+
+/*function infnHideLogout() {
+    var logoffElements = document.querySelectorAll("a[href='https://mediawall-dev.infn.it/logoff']");
+    for (let el of logoffElements) {
+        el.parentElement.style.display = "none";
+    }
+
+    document.getElementById("sideBarContainer").querySelector("a[href='https://mediawall-dev.infn.it/logoff']").style.display = "none";
+    document.getElementsByClassName("dropdown-menu-right")[1].querySelector("a[href='https://mediawall-dev.infn.it/logoff']").style.display = "none";
+}*/
+
+infnCustomButton();
+infnHidePanelFooter();
+// infnHideLogout();
